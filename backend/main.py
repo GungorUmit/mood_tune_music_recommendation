@@ -15,6 +15,11 @@ app = FastAPI(
     version="1.0.0"
 )
 
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
+
 # CORS configuration - allow frontend to make requests
 FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
 ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
