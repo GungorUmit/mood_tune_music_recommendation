@@ -1,0 +1,231 @@
+/* ============================================
+   🎙️ VOICE INPUT - SPOTIFY AI DJ STYLE
+   ============================================ */
+
+.voiceButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.5rem;
+  background: var(--gradient-spotify);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    var(--neuro-shadow-1),
+    0 0 30px rgba(139, 92, 246, 0.5);
+  overflow: hidden;
+}
+
+/* Glossy shine effect */
+.voiceButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.voiceButton:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.voiceButton:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 
+    var(--neuro-shadow-2),
+    0 0 50px rgba(139, 92, 246, 0.8),
+    0 0 80px rgba(139, 92, 246, 0.4);
+}
+
+.voiceButton:active:not(:disabled) {
+  transform: translateY(-2px) scale(0.98);
+}
+
+.voiceButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: var(--neuro-shadow-1);
+}
+
+/* ============================================
+   🔴 LISTENING STATE - GLOWING PULSE
+   ============================================ */
+
+.voiceButton.listening {
+  background: var(--gradient-dj);
+  animation: 
+    glowPulseIntense 1.5s ease-in-out infinite,
+    scaleBreath 2s ease-in-out infinite;
+}
+
+@keyframes glowPulseIntense {
+  0%, 100% {
+    box-shadow: 
+      var(--neuro-shadow-2),
+      0 0 40px rgba(236, 72, 153, 0.8),
+      0 0 80px rgba(139, 92, 246, 0.6),
+      0 0 120px rgba(6, 182, 212, 0.4);
+  }
+  50% {
+    box-shadow: 
+      var(--neuro-shadow-2),
+      0 0 60px rgba(236, 72, 153, 1),
+      0 0 100px rgba(139, 92, 246, 0.8),
+      0 0 150px rgba(6, 182, 212, 0.6);
+  }
+}
+
+@keyframes scaleBreath {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* ============================================
+   🎤 MICROPHONE ICON - ANIMATED
+   ============================================ */
+
+.micIcon,
+.pulseIcon {
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+.pulseIcon {
+  animation: 
+    micBounce 0.6s ease-in-out infinite alternate,
+    micRotate 3s linear infinite;
+}
+
+@keyframes micBounce {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-5px) scale(1.15);
+  }
+}
+
+@keyframes micRotate {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+/* ============================================
+   📝 TEXT LABELS
+   ============================================ */
+
+.buttonText,
+.listeningText {
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.08em;
+}
+
+.listeningText {
+  animation: textPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* ============================================
+   🌊 FLOATING GLOW EFFECT (on hover)
+   ============================================ */
+
+.voiceButton::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 70%
+  );
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.voiceButton:hover::after {
+  opacity: 1;
+}
+
+/* ============================================
+   📱 RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .voiceButton {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .micIcon,
+  .pulseIcon {
+    font-size: 1.3rem;
+  }
+
+  .buttonText,
+  .listeningText {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .voiceButton {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.85rem;
+    gap: 0.6rem;
+  }
+
+  .micIcon,
+  .pulseIcon {
+    font-size: 1.2rem;
+  }
+
+  .buttonText,
+  .listeningText {
+    font-size: 0.8rem;
+  }
+}
+

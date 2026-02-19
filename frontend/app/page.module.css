@@ -1,47 +1,135 @@
+/* ============================================
+   🎵 MAIN LAYOUT - SPOTIFY AI DJ THEME
+   ============================================ */
+
 .main {
   min-height: calc(100vh - 80px);
-  padding: 3rem 0;
+  padding: 3rem 0 calc(160px + 2rem);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 /* ============================================
-   HERO SECTION
+   🌟 HERO SECTION - NEUMORPHIC DESIGN
    ============================================ */
 
 .hero {
-  text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.heroText {
+  text-align: left;
+  z-index: 1;
+}
+
+.heroImage {
+  position: relative;
+  z-index: 1;
+}
+
+.heroImg {
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  box-shadow: var(--neuro-shadow-2), var(--glow-purple);
+  animation: fadeIn 1s ease-out 0.3s backwards;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 4px solid var(--neuro-elevated);
+}
+
+.heroImg:hover {
+  transform: scale(1.03);
+  box-shadow: 
+    var(--neuro-shadow-2),
+    0 0 60px rgba(139, 92, 246, 0.6),
+    0 0 100px rgba(236, 72, 153, 0.4);
 }
 
 .title {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
   animation: fadeIn 0.8s ease-out;
 }
 
 .subtitle {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: var(--text-glow);
+  line-height: 1.7;
+  font-weight: 600;
   animation: fadeIn 1s ease-out 0.2s backwards;
+}
+
+/* Responsive Hero */
+@media (max-width: 968px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .heroText {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .heroImg {
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    margin-bottom: 2.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
 }
 
 /* ============================================
    SEARCH SECTION
    ============================================ */
 
+/* ============================================
+   🔍 SEARCH SECTION - NEUMORPHIC INPUTS
+   ============================================ */
+
 .searchSection {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 2rem;
+  background: var(--neuro-surface);
+  border-radius: 28px;
+  box-shadow: var(--neuro-shadow-2);
+  animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .inputWrapper {
@@ -50,42 +138,63 @@
 
 .textarea {
   width: 100%;
-  min-height: 140px;
-  padding: 1.25rem;
-  font-size: 1.0625rem;
-  line-height: 1.6;
+  min-height: 160px;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.7;
   resize: vertical;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.textarea:focus {
+  outline: none;
 }
 
 .textarea:disabled {
-  opacity: 0.7;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
 .charCount {
   position: absolute;
-  bottom: 0.75rem;
-  right: 1rem;
-  font-size: 0.8125rem;
-  color: var(--text-tertiary);
+  bottom: 1rem;
+  right: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  font-weight: 700;
   pointer-events: none;
+  background: var(--neuro-surface);
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
 }
 
 .errorMessage {
-  padding: 1rem;
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid var(--error-color);
-  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  background: rgba(239, 68, 68, 0.15);
+  border: 2px solid var(--error-color);
+  border-radius: 16px;
   color: var(--error-color);
-  font-size: 0.9375rem;
+  font-size: 1rem;
+  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  box-shadow: var(--neuro-shadow-1);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .spinner {
   display: inline-block;
   animation: spin 1s linear infinite;
+  font-size: 1.5rem;
 }
 
 /* ============================================
@@ -150,18 +259,97 @@
   margin: 0;
 }
 
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.viewToggle {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.25rem;
+  gap: 0.25rem;
+}
+
+.toggleBtn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.toggleBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.toggleBtn.active {
+  background: var(--accent-color);
+  color: white;
+}
+
 .metadata {
   display: flex;
   gap: 2rem;
-  padding: 1.5rem;
+  padding: 2rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.metadata::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    #667eea 0%,
+    #764ba2 25%,
+    #f093fb 50%,
+    #f5576c 75%,
+    #667eea 100%
+  );
+  background-size: 200% 100%;
+  animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
 }
 
 .metadataItem {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(135deg, #667eea, #f093fb) 1;
+  background: linear-gradient(135deg, 
+    rgba(102, 126, 234, 0.05),
+    rgba(240, 147, 251, 0.05)
+  );
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.metadataItem:hover {
+  transform: translateX(4px);
+  background: linear-gradient(135deg, 
+    rgba(102, 126, 234, 0.1),
+    rgba(240, 147, 251, 0.1)
+  );
 }
 
 .metadataLabel {
@@ -173,9 +361,12 @@
 }
 
 .metadataValue {
-  font-size: 1rem;
-  color: var(--text-primary);
-  font-weight: 600;
+  font-size: 1.125rem;
+  background: linear-gradient(135deg, #667eea, #f093fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
 }
 
 .trackGrid {

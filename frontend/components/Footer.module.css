@@ -1,0 +1,119 @@
+/* ============================================
+   🎵 FOOTER - SPOTIFY AI DJ THEME
+   ============================================ */
+
+.footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 3rem 2rem 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(139, 92, 246, 0.08) 0%,
+    rgba(236, 72, 153, 0.12) 100%
+  );
+  border-top: 2px solid rgba(139, 92, 246, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.text {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.15rem;
+  color: var(--text-glow);
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.heart {
+  display: inline-block;
+  color: #ff0844;
+  animation: heartbeatGlow 1.5s ease-in-out infinite;
+  font-size: 1.3rem;
+  margin: 0 0.25rem;
+  filter: drop-shadow(0 0 12px rgba(255, 8, 68, 0.6));
+}
+
+@keyframes heartbeatGlow {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 12px rgba(255, 8, 68, 0.6));
+  }
+  10%, 30% {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 20px rgba(255, 8, 68, 0.9));
+  }
+  20%, 40% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 12px rgba(255, 8, 68, 0.6));
+  }
+}
+
+.name {
+  background: var(--gradient-dj);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 900;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.5));
+}
+
+.name::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-dj);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
+}
+
+.name:hover::after {
+  transform: scaleX(1);
+}
+
+.subtext {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .footer {
+    padding: 2rem 1rem 1.5rem;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+
+  .heart {
+    font-size: 1rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .subtext {
+    font-size: 0.75rem;
+  }
+}

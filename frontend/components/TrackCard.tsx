@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Track } from '@/lib/types';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translate } from '@/lib/translations';
@@ -12,6 +12,40 @@ interface TrackCardProps {
 
 export default function TrackCard({ track }: TrackCardProps) {
     const { language } = useLanguage();
+    const [isPlaying, setIsPlaying] = useState(false);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+
+    useEffect(() => {
+        // Cleanup on unmount
+        return () => {
+            if (audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current = null;
+            }
+        };
+    }, []);
+
+    const togglePlay = (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (!audioRef.current && track.preview_url) {
+            audioRef.current = new Audio(track.preview_url);
+            audioRef.current.onended = () => setIsPlaying(false);
+        }
+
+        if (audioRef.current) {
+            if (isPlaying) {
+                audioRef.current.pause();
+            } else {
+                audioRef.current.play().catch(err => {
+                    console.error("Playback failed:", err);
+                    setIsPlaying(false);
+                });
+            }
+            setIsPlaying(!isPlaying);
+        }
+    };
 
     const formatDuration = (seconds: number): string => {
         const mins = Math.floor(seconds / 60);
@@ -20,8 +54,8 @@ export default function TrackCard({ track }: TrackCardProps) {
     };
 
     return (
-        <div className={`${styles.card} glass fade-in`}>
-            <div className={styles.coverWrapper}>
+        <div className={`${styles.card} glass fade-in ${isPlaying ? styles.cardPlaying : ''}`}>
+            <div className={styles.coverWrapper} onClick={togglePlay}>
                 <img
                     src={track.cover_image}
                     alt={`${track.title} album cover`}
@@ -29,8 +63,8 @@ export default function TrackCard({ track }: TrackCardProps) {
                     loading="lazy"
                 />
                 {track.preview_url && (
-                    <div className={styles.playOverlay}>
-                        <span className={styles.playIcon}>▶️</span>
+                    <div className={`${styles.playOverlay} ${isPlaying ? styles.visible : ''}`}>
+                        <span className={styles.playIcon}>{isPlaying ? '⏸️' : '▶️'}</span>
                     </div>
                 )}
             </div>

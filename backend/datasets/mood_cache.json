@@ -1,0 +1,470 @@
+{
+  "estudiando para examen final a las 3am": {
+    "mood_tags": [
+      "focused",
+      "determined",
+      "stressed",
+      "late-night"
+    ],
+    "energy": "medium",
+    "genres": [
+      "lo-fi",
+      "ambient",
+      "classical"
+    ],
+    "search_query": "study focus music 2026 top"
+  },
+  "studying for final exam at 3am": {
+    "mood_tags": [
+      "focused",
+      "determined",
+      "stressed",
+      "late-night"
+    ],
+    "energy": "medium",
+    "genres": [
+      "lo-fi",
+      "ambient",
+      "classical"
+    ],
+    "search_query": "study focus music 2026 top"
+  },
+  "triste después de una ruptura": {
+    "mood_tags": [
+      "triste",
+      "melancólico",
+      "heartbroken"
+    ],
+    "energy": "low",
+    "genres": [
+      "balada",
+      "indie",
+      "acústico"
+    ],
+    "search_query": "balada triste 2026 actuales"
+  },
+  "sad after a breakup": {
+    "mood_tags": [
+      "sad",
+      "melancholic",
+      "heartbroken"
+    ],
+    "energy": "low",
+    "genres": [
+      "ballad",
+      "indie",
+      "acoustic"
+    ],
+    "search_query": "sad breakup songs 2026 top"
+  },
+  "fiesta en la playa con amigos": {
+    "mood_tags": [
+      "feliz",
+      "enérgico",
+      "social",
+      "fiesta"
+    ],
+    "energy": "high",
+    "genres": [
+      "reggaeton",
+      "house",
+      "tropical"
+    ],
+    "search_query": "reggaeton fiesta 2026 hits"
+  },
+  "beach party with friends": {
+    "mood_tags": [
+      "happy",
+      "energetic",
+      "social",
+      "party"
+    ],
+    "energy": "high",
+    "genres": [
+      "reggaeton",
+      "house",
+      "tropical"
+    ],
+    "search_query": "beach party hits 2026 top"
+  },
+  "working out at the gym": {
+    "mood_tags": [
+      "motivated",
+      "intense",
+      "powerful",
+      "energetic"
+    ],
+    "energy": "high",
+    "genres": [
+      "hip-hop",
+      "electronic",
+      "trap"
+    ],
+    "search_query": "workout gym music 2026 top"
+  },
+  "entrenando en el gimnasio": {
+    "mood_tags": [
+      "motivado",
+      "intenso",
+      "poderoso",
+      "enérgico"
+    ],
+    "energy": "high",
+    "genres": [
+      "hip-hop",
+      "electrónica",
+      "trap"
+    ],
+    "search_query": "música gimnasio 2026 hits"
+  },
+  "relaxing at home after work": {
+    "mood_tags": [
+      "calm",
+      "peaceful",
+      "tired",
+      "chill"
+    ],
+    "energy": "low",
+    "genres": [
+      "chill",
+      "jazz",
+      "acoustic"
+    ],
+    "search_query": "relaxing chill music 2026 top"
+  },
+  "relajándome en casa después del trabajo": {
+    "mood_tags": [
+      "tranquilo",
+      "pacífico",
+      "cansado",
+      "relajado"
+    ],
+    "energy": "low",
+    "genres": [
+      "chill",
+      "jazz",
+      "acústico"
+    ],
+    "search_query": "música relajante 2026 actuales"
+  },
+  "driving at night through the city": {
+    "mood_tags": [
+      "nostalgic",
+      "atmospheric",
+      "contemplative"
+    ],
+    "energy": "medium",
+    "genres": [
+      "synthwave",
+      "chillwave",
+      "electronic"
+    ],
+    "search_query": "night drive music 2026 top"
+  },
+  "conduciendo de noche por la ciudad": {
+    "mood_tags": [
+      "nostálgico",
+      "atmosférico",
+      "contemplativo"
+    ],
+    "energy": "medium",
+    "genres": [
+      "synthwave",
+      "chillwave",
+      "electrónica"
+    ],
+    "search_query": "música nocturna 2026 hits"
+  },
+  "feeling happy and excited": {
+    "mood_tags": [
+      "happy",
+      "excited",
+      "joyful",
+      "upbeat"
+    ],
+    "energy": "high",
+    "genres": [
+      "pop",
+      "dance",
+      "indie-pop"
+    ],
+    "search_query": "happy upbeat music 2026 top"
+  },
+  "sintiéndome feliz y emocionado": {
+    "mood_tags": [
+      "feliz",
+      "emocionado",
+      "alegre",
+      "animado"
+    ],
+    "energy": "high",
+    "genres": [
+      "pop",
+      "dance",
+      "indie-pop"
+    ],
+    "search_query": "música alegre 2026 hits"
+  },
+  "rainy day at home feeling cozy": {
+    "mood_tags": [
+      "cozy",
+      "peaceful",
+      "introspective",
+      "calm"
+    ],
+    "energy": "low",
+    "genres": [
+      "indie-folk",
+      "acoustic",
+      "ambient"
+    ],
+    "search_query": "rainy day music 2026 top"
+  },
+  "día lluvioso en casa sintiéndome acogedor": {
+    "mood_tags": [
+      "acogedor",
+      "pacífico",
+      "introspectivo",
+      "tranquilo"
+    ],
+    "energy": "low",
+    "genres": [
+      "indie-folk",
+      "acústico",
+      "ambient"
+    ],
+    "search_query": "música día lluvioso 2026 actuales"
+  },
+  "angry and need to release energy": {
+    "mood_tags": [
+      "angry",
+      "intense",
+      "aggressive",
+      "powerful"
+    ],
+    "energy": "high",
+    "genres": [
+      "rock",
+      "metal",
+      "punk"
+    ],
+    "search_query": "angry rock music 2026 top"
+  },
+  "enojado y necesito liberar energía": {
+    "mood_tags": [
+      "enojado",
+      "intenso",
+      "agresivo",
+      "poderoso"
+    ],
+    "energy": "high",
+    "genres": [
+      "rock",
+      "metal",
+      "punk"
+    ],
+    "search_query": "música rock enérgica 2026 hits"
+  },
+  "romantic dinner with partner": {
+    "mood_tags": [
+      "romantic",
+      "intimate",
+      "loving",
+      "soft"
+    ],
+    "energy": "low",
+    "genres": [
+      "r&b",
+      "soul",
+      "jazz"
+    ],
+    "search_query": "romantic dinner music 2026 top"
+  },
+  "cena romántica con pareja": {
+    "mood_tags": [
+      "romántico",
+      "íntimo",
+      "amoroso",
+      "suave"
+    ],
+    "energy": "low",
+    "genres": [
+      "r&b",
+      "soul",
+      "jazz"
+    ],
+    "search_query": "música romántica 2026 actuales"
+  },
+  "morning coffee and reading": {
+    "mood_tags": [
+      "peaceful",
+      "contemplative",
+      "calm",
+      "morning"
+    ],
+    "energy": "low",
+    "genres": [
+      "classical",
+      "jazz",
+      "acoustic"
+    ],
+    "search_query": "morning coffee music 2026 top"
+  },
+  "café matutino y lectura": {
+    "mood_tags": [
+      "pacífico",
+      "contemplativo",
+      "tranquilo",
+      "mañana"
+    ],
+    "energy": "low",
+    "genres": [
+      "clásica",
+      "jazz",
+      "acústico"
+    ],
+    "search_query": "música café mañana 2026 actuales"
+  },
+  "estudiando con lluvia y café ☕": {
+    "mood_tags": [
+      "focused",
+      "calm",
+      "studious",
+      "cozy"
+    ],
+    "energy": "medium",
+    "genres": [
+      "lo-fi",
+      "ambient",
+      "jazz"
+    ],
+    "search_query": "lo-fi study music 2026 top"
+  },
+  "studying with rain and coffee ☕": {
+    "mood_tags": [
+      "focused",
+      "calm",
+      "studious",
+      "cozy"
+    ],
+    "energy": "medium",
+    "genres": [
+      "lo-fi",
+      "ambient",
+      "jazz"
+    ],
+    "search_query": "lo-fi study music 2026 top"
+  },
+  "entrenamiento intenso, necesito motivación 💪": {
+    "mood_tags": [
+      "motivated",
+      "powerful",
+      "intense",
+      "energetic"
+    ],
+    "energy": "high",
+    "genres": [
+      "hip-hop",
+      "trap",
+      "electronic"
+    ],
+    "search_query": "workout motivation 2026 hits"
+  },
+  "workout session, need motivation 💪": {
+    "mood_tags": [
+      "motivated",
+      "powerful",
+      "intense",
+      "energetic"
+    ],
+    "energy": "high",
+    "genres": [
+      "hip-hop",
+      "trap",
+      "electronic"
+    ],
+    "search_query": "workout motivation 2026 top"
+  },
+  "study exam 3am": {
+    "mood_tags": [
+      "focused",
+      "intense",
+      "determined",
+      "late-night"
+    ],
+    "energy": "medium",
+    "genres": [
+      "study beats",
+      "ambient",
+      "deep house",
+      "chillwave"
+    ],
+    "search_query": "study exam 3am 2026 top"
+  },
+  "sad breakup": {
+    "mood_tags": [
+      "heartbroken",
+      "melancholic",
+      "reflective",
+      "emotional",
+      "soulful"
+    ],
+    "energy": "low",
+    "genres": [
+      "indie rock",
+      "sadcore",
+      "alternative",
+      "ballad",
+      "acoustic"
+    ],
+    "search_query": "sad breakup songs 2026"
+  },
+  "fiesta con amigos, reggaeton y salsa 💃": {
+    "mood_tags": [
+      "fiesta",
+      "divertido",
+      "social",
+      "bailar",
+      "euforia"
+    ],
+    "energy": "high",
+    "genres": [
+      "reggaeton",
+      "salsa",
+      "dancehall",
+      "pop latina",
+      "tropical house"
+    ],
+    "search_query": "fiesta con amigos reggaeton salsa 2026 top"
+  },
+  "long road trip, singing classics 🚗": {
+    "mood_tags": [
+      "nostalgic",
+      "uplifting",
+      "adventurous"
+    ],
+    "energy": "medium",
+    "genres": [
+      "rock",
+      "pop",
+      "classic hits",
+      "road trip"
+    ],
+    "search_query": "road trip singing classics 2026 top"
+  },
+  "working at home and i want concentration": {
+    "mood_tags": [
+      "focused",
+      "productive",
+      "relaxed"
+    ],
+    "energy": "medium",
+    "genres": [
+      "lo-fi",
+      "ambient",
+      "study",
+      "classical"
+    ],
+    "search_query": "concentration music working from home 2026 top"
+  }
+}

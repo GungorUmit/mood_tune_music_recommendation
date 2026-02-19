@@ -14,7 +14,10 @@ export default function Header() {
             <div className={styles.container}>
                 <div className={styles.logo}>
                     <span className={styles.logoIcon}>🎵</span>
-                    <h2 className={styles.logoText}>MoodTune</h2>
+                    <div className={styles.logoContent}>
+                        <h2 className={styles.logoText}>MoodTune</h2>
+                        <p className={styles.tagline}>AI-Powered Music Searcher</p>
+                    </div>
                 </div>
 
                 <div className={styles.controls}>

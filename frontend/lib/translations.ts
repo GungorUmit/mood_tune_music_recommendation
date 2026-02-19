@@ -38,6 +38,13 @@ export const translations: Record<Language, Record<string, string>> = {
         example1: 'studying with rain and coffee ☕',
         example2: 'long road trip, singing classics 🚗',
         example3: 'workout session, need motivation 💪',
+
+        // Voice Input
+        voiceButton: 'Speak',
+        voiceButtonTitle: 'Click to speak your mood',
+        voiceListening: 'Listening...',
+        voicePermissionDenied: 'Microphone permission denied. Please allow microphone access in your browser settings.',
+        voiceNoSpeech: 'No speech detected. Please try again.',
     },
     es: {
         // Header
@@ -76,6 +83,13 @@ export const translations: Record<Language, Record<string, string>> = {
         example1: 'estudiando con lluvia y café ☕',
         example2: 'fiesta con amigos, reggaeton y salsa 💃',
         example3: 'entrenamiento intenso, necesito motivación 💪',
+
+        // Voice Input
+        voiceButton: 'Hablar',
+        voiceButtonTitle: 'Haz clic para hablar tu mood',
+        voiceListening: 'Escuchando...',
+        voicePermissionDenied: 'Permiso de micrófono denegado. Por favor permite el acceso al micrófono en la configuración de tu navegador.',
+        voiceNoSpeech: 'No se detectó voz. Por favor intenta de nuevo.',
     },
 };
 
