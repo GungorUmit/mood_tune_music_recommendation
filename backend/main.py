@@ -15,9 +15,11 @@ app = FastAPI(
     version="1.0.0"
 )
 
-@app.get("/health")
+@app.get("/health", include_in_schema=False)  # Add this line if needed
+@app.head("/health")  # Add this new decorator
 async def health():
     return {"status": "ok"}
+
 
 
 # CORS configuration - allow frontend to make requests
