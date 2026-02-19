@@ -6,13 +6,15 @@ MoodTune is an AI-powered music discovery web app that translates natural langua
 
 ## 🚀 Project Status
 
-✅ **MVP Completed** - Ready for local use and presentation.
+✅ **MVP Completed** - Deployed and ready for presentation.
 
 ## 🎥 Demo
 
-> **Status**: 🚧 Video demo coming soon
+🌐 **Live App**: [https://moodtune.umitgungor.me](https://moodtune.umitgungor.me)
 
-🎬 **Watch MoodTune in action**: [Link to video demo - pending deployment]
+🎬 **Video Demo**: [Coming soon - Being recorded]
+
+📡 **API Backend**: [https://api-moodtune.umitgungor.me](https://api-moodtune.umitgungor.me)
 
 **What you'll see**:
 - Natural language mood input (e.g., "sad and melancholic after a breakup")
@@ -25,7 +27,7 @@ MoodTune is an AI-powered music discovery web app that translates natural langua
 
 ### **Why is this an AI project?**
 
-MoodTune uses **OpenAI GPT-4o-mini (Large Language Model)** to solve a problem traditional search cannot: **understanding emotional context**.
+MoodTune uses **Hugging Face Mistral-7B-Instruct-v0.2 (Large Language Model)** to solve a problem traditional search cannot: **understanding emotional context**.
 
 **Traditional search** (keyword matching):
 - User: "sad music" → Returns only songs with word "sad" in title
@@ -49,11 +51,11 @@ MoodTune uses **OpenAI GPT-4o-mini (Large Language Model)** to solve a problem t
 }
 ```
 
-This is **transfer learning** in action: leveraging a pre-trained language model (GPT-4o-mini) for a specialized music discovery task.
+This is **transfer learning** in action: leveraging a pre-trained language model (Mistral-7B-Instruct-v0.2) for a specialized music discovery task.
 
 ## ✨ Features
 
-- 🤖 **AI-Powered Understanding**: Uses OpenAI GPT-4o-mini to interpret complex mood descriptions (see AI explanation above).
+- 🤖 **AI-Powered Understanding**: Uses Hugging Face Mistral-7B-Instruct-v0.2 to interpret complex mood descriptions (see AI explanation above).
 - 🎼 **Real Music Discovery**: Integration with **Deezer Public API** (Search & Charts).
 - 🎵 **Interactive Previews**: Listen to 30s song segments directly in the app.
 - 🌍 **Bilingual Support**: Toggle between Spanish and English.
@@ -69,19 +71,19 @@ This is **transfer learning** in action: leveraging a pre-trained language model
 
 **Backend:**
 - FastAPI (Python 3.11+)
-- OpenAI GPT-4o-mini
-- Deezer Simple API
+- Hugging Face Mistral-7B-Instruct-v0.2
+- Deezer Public API
 
 **Deployment:**
-- Frontend: Vercel
-- Backend: Render
+- Frontend: Vercel ([https://moodtune.umitgungor.me](https://moodtune.umitgungor.me))
+- Backend: Render ([https://api-moodtune.umitgungor.me](https://api-moodtune.umitgungor.me))
 
 ## 💻 Local Development
 
 ### Prerequisites
 - Python 3.11+
 - Node.js 18+
-- OpenAI API key
+- Hugging Face API token (free at [huggingface.co](https://huggingface.co))
 
 ### Backend Setup
 
@@ -90,7 +92,7 @@ cd backend
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
-echo "OPENAI_API_KEY=your-key-here" > .env
+echo "HUGGINGFACE_TOKEN=your-token-here" > .env
 python main.py
 ```
 
