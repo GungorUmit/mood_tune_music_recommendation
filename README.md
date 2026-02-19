@@ -12,7 +12,7 @@ MoodTune is an AI-powered music discovery web app that translates natural langua
 
 🌐 **Live App**: [https://moodtune.umitgungor.me](https://moodtune.umitgungor.me)
 
-🎬 **Video Demo**: [Coming soon - Being recorded]
+🎬 **Video Demo**: [Watch on Vimeo](https://vimeo.com/1166420456) ⭐
 
 📡 **API Backend**: [https://api-moodtune.umitgungor.me](https://api-moodtune.umitgungor.me)
 

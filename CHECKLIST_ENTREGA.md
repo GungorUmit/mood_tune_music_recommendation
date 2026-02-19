@@ -20,33 +20,34 @@
 
 ### **FASE 2: Implementación**
 
-- [ ] **Código en GitHub**
-  - [ ] Repositorio público creado
-  - [ ] Link del repo: `__________________________`
-  - [ ] `.env` NO está en el repo (verificar con `git log --all --full-history -- backend/.env`)
-  - [ ] Commits con mensajes descriptivos (no solo "update" o "fix")
+- [x] **Código en GitHub**
+  - [x] Repositorio público creado
+  - [x] Link del repo: `https://github.com/GungorUmit/mood_tune_music_recommendation`
+  - [x] `.env` NO está en el repo (verificar con `git log --all --full-history -- backend/.env`)
+  - [x] Commits con mensajes descriptivos (no solo "update" o "fix")
   
 - [x] **README profesional**
   - [x] Título claro y descripción
   - [x] Instrucciones de instalación (backend + frontend)
   - [x] Stack tecnológico visible
-  - [ ] **⚠️ FALTA**: Link al video demo (completar después de grabar)
+  - [x] ✅ Link al video demo agregado
   
 - [x] **Componente de IA claro**
   - [x] Explicado en README (sección "AI Component Explained")
   - [x] Código visible en [backend/services/llm_service.py](./backend/services/llm_service.py)
   - [x] Justificación del por qué es IA (vs búsqueda simple)
   
-- [ ] **Demo funcional**
-  - **Opción A: Deploy online**
-    - [ ] Frontend desplegado en Vercel
-    - [ ] Backend desplegado en Render
-    - [ ] Link funcional: `__________________________`
-  - **Opción B: Video demo** (MÍNIMO requerido si no hay deploy)
-    - [ ] Video grabado (2-3 min)
-    - [ ] Subido a YouTube/Loom/Drive
-    - [ ] Link agregado a README
-    - [ ] Link: `__________________________`
+- [x] **Demo funcional**
+  - **Opción A: Deploy online** ✅ COMPLETADO
+    - [x] Frontend desplegado en Vercel
+    - [x] Backend desplegado en Render
+    - [x] Link funcional: `https://moodtune.umitgungor.me`
+    - [x] API funcional: `https://api-moodtune.umitgungor.me`
+  - **Opción B: Video demo** ✅ COMPLETADO
+    - [x] Video grabado (2-3 min)
+    - [x] Subido a Vimeo
+    - [x] Link agregado a README
+    - [x] Link: `https://vimeo.com/1166420456`
   
 - [x] **Documentación técnica**
   - [x] [ARQUITECTURA.md](./ARQUITECTURA.md) con:
