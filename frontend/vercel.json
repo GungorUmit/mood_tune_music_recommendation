@@ -1,0 +1,13 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "env": {
+    "NEXT_PUBLIC_API_URL": "https://api-moodtune.umitgungor.me",
+    "NEXT_PUBLIC_APP_NAME": "MoodTune",
+    "NEXT_PUBLIC_ENVIRONMENT": "production"
+  }
+}

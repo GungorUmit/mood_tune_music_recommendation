@@ -1,0 +1,28 @@
+services:
+  # Backend API - MoodTune
+  - type: web
+    name: moodtune-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: HUGGINGFACE_TOKEN
+        sync: false
+      - key: DEEZER_APP_ID
+        sync: false
+      - key: DEEZER_SECRET_KEY
+        sync: false
+      - key: DEEZER_REDIRECT_URI
+        value: https://api-moodtune.umitgungor.me/auth/deezer/callback
+      - key: FRONTEND_URL
+        value: https://moodtune.umitgungor.me
+      - key: ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: RATE_LIMIT_PER_HOUR
+        value: 100

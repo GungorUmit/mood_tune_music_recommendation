@@ -4,6 +4,7 @@ from fastapi.responses import RedirectResponse, JSONResponse
 from pydantic import BaseModel, Field
 from typing import List, Optional
 import uvicorn
+import os
 from services.llm_service import analyze_mood
 from services.deezer_service import deezer_service
 from services.deezer_auth_service import deezer_auth_service
@@ -15,9 +16,25 @@ app = FastAPI(
 )
 
 # CORS configuration - allow frontend to make requests
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
+ENVIRONMENT = os.getenv("ENVIRONMENT", "development")
+
+# Configure allowed origins based on environment
+allowed_origins = [
+    "http://localhost:3000",
+    "http://localhost:3001",
+]
+
+if ENVIRONMENT == "production":
+    allowed_origins.extend([
+        "https://moodtune.umitgungor.me",
+        "https://api-moodtune.umitgungor.me",
+        FRONTEND_URL
+    ])
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001"],  # Frontend dev servers
+    allow_origins=allowed_origins,
     allow_credentials=False,
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
@@ -176,10 +193,13 @@ async def root():
 
 @app.get("/api/health")
 async def health_check():
-    """Health check endpoint"""
+    """Health check endpoint for monitoring and deployment verification"""
     return {
-        "status": "ok",
-        "version": "1.0.0"
+        "status": "healthy",
+        "version": "1.0.0",
+        "environment": ENVIRONMENT,
+        "cors_enabled": True,
+        "allowed_origins": len(allowed_origins)
     }
 
 
