@@ -26,7 +26,7 @@ Las plataformas de streaming musical (Spotify, Deezer, Apple Music) ofrecen mill
 **MoodTune**: Un asistente de descubrimiento musical que traduce descripciones naturales en lenguaje humano ("estudiando con lluvia, necesito foco") a recomendaciones musicales precisas.
 
 ### **¿Por qué IA?**
-- **LLM (GPT-4o-mini)** interpreta el **contexto semántico** del mood:
+- **LLM (Mistral-7B)** interpreta el **contexto semántico** del mood:
   - Extrae emociones ("triste", "energético", "romántico")
   - Infiere nivel de energía (low/medium/high)
   - Traduce a géneros musicales relevantes
@@ -46,7 +46,7 @@ Las plataformas de streaming musical (Spotify, Deezer, Apple Music) ofrecen mill
 
 ### **Alcance Mínimo (In-Scope)**
 - [x] Input de texto libre (10-500 caracteres)
-- [x] Análisis de mood con LLM (OpenAI GPT-4o-mini)
+- [x] Análisis de mood con LLM (LLM (Mistral-7B)
 - [x] Búsqueda en Deezer Public API (sin autenticación)
 - [x] Previews de audio (30s snippets)
 - [x] Frontend responsive con Next.js + TypeScript
